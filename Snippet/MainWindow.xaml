@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snippet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="0" Grid.Row="0">
+            <MenuItem Name="Run" Click="Run_Click" Header="编辑"></MenuItem>
+            <MenuItem Name="AlwaysOnTop" Click="AlwaysOnTop_Click" Header="置顶"/>
+        </Menu>
+        <WrapPanel Grid.Column="0" Grid.Row="1" Name="SnippetContent">
+            <Button Name="AddSnippetButton" Click="AddSnippetButton_Click" Margin="3" FontWeight="Bold" Width="200" Visibility="Collapsed">+</Button>
+        </WrapPanel>
     </Grid>
 </Window>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Snippet.SnippetPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Snippet"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" Margin="1" BorderBrush="Black" BorderThickness="1">
+    <StackPanel Orientation="Horizontal" Margin="3">
+        <Button Name="DeletItemButton" Click="DeletItemButton_Click" Width="20" Height="20" Margin="0,0,3,0" Visibility="Collapsed">X</Button>
+        <TextBox Name="Trigger" MinWidth="30" IsEnabled="False" />
+        <TextBlock Width="1" Background="Black" Margin="3,0" />
+        <TextBox Name="Script" MinWidth="100" IsEnabled="False"/>
+        <CheckBox Name="IsHotKey" Content="Key" Margin="3,0,0,0" VerticalAlignment="Center" Visibility="Collapsed"/>
+        <CheckBox Name="IsSnippet" Content="Snippet" Margin="3,0,0,0" VerticalAlignment="Center" Visibility="Collapsed"/>
+        <CheckBox Name="ClipboardOrSend" Content="ClipboardOrSend" Margin="3,0,0,0" VerticalAlignment="Center" Visibility="Collapsed"/>
+    </StackPanel>
+</UserControl>
